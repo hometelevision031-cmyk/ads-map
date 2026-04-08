@@ -1,0 +1,54 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background: #f5f5f5;
+}
+
+h2 {
+    margin-top: 10px;
+}
+
+input, button {
+    margin: 5px;
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.container {
+    display: flex;
+}
+
+#map {
+    width: 70%;
+    height: 500px;
+}
+
+#list {
+    width: 30%;
+    padding: 10px;
+    background: white;
+    overflow-y: auto;
+}
+
+.ad {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.ad img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+}
