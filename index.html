@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Вход</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>🔐 Вход / Регистрация</h2>
+
+<input id="login" placeholder="Логин">
+<input id="pass" type="password" placeholder="Пароль">
+
+<button onclick="register()">Регистрация</button>
+<button onclick="loginUser()">Войти</button>
+
+<script>
+function register() {
+    let login = document.getElementById("login").value;
+    let pass = document.getElementById("pass").value;
+
+    if (!login || !pass) return alert("Заполни всё");
+
+    localStorage.setItem(login, pass);
+    alert("Зарегистрирован");
+}
+
+function loginUser() {
+    let login = document.getElementById("login").value;
+    let pass = document.getElementById("pass").value;
+
+    if (localStorage.getItem(login) === pass) {
+        localStorage.setItem("currentUser", login);
+        window.location.href = "app.html";
+    } else {
+        alert("Ошибка");
+    }
+}
+</script>
+
+</body>
+</html>
