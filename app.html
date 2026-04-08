@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Объявления</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+</head>
+<body>
+
+<h2>📍 Доска объявлений</h2>
+<button onclick="logout()">Выйти</button>
+
+<div class="form">
+    <input id="title" placeholder="Название">
+    <input id="desc" placeholder="Описание">
+    <input id="lat" placeholder="Широта">
+    <input id="lng" placeholder="Долгота">
+    <input type="file" id="image">
+    <button onclick="addAd()">Добавить</button>
+</div>
+
+<input id="search" placeholder="Поиск..." oninput="searchAds()">
+
+<div class="container">
+    <div id="map"></div>
+    <div id="list"></div>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
